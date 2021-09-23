@@ -1,0 +1,56 @@
+
+<html>
+<head>
+	<title>회원가입</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script>
+		function Confirmpw(){
+			var form = document.userinput;
+			var passwd = document.getElementsByName("Upass");
+			var passwdConf = document.getElementsByName("UpassConf");
+			if(passwd[0].value == passwdConf[0].value)
+				form.submit();
+			else
+				alert("비밀번호가 일치하지 않습니다.");
+		}
+	</script>
+</head>
+<body>
+	<div class="banner-box">
+			<img src="../res/KAIF_logo_alpha_zero.png" width="70px" height="70px">
+	</div>
+	<div class="banner-box-opz">
+	</div>
+	<div>
+		<form class="login-box" method="POST" action="register.php" name="userinput">
+			<dir>
+				<h1>회원가입</h1>
+			</dir>
+			<dir>
+				<input placeholder="nickname" type="text" name="Cname">
+			</dir>
+			<dir class="space-unit">
+			</dir>
+			<dir>
+				<input placeholder="ID" type="text" name="Uname">
+			</dir>
+			<dir class="space-unit">
+			</dir>
+			<dir>
+				<input placeholder="password" name="Upass" type="password">
+			</dir>
+			<dir>
+				<input placeholder="Confirm Password" name="UpassConf" type="password">
+			</dir>
+			<dir class="space-unit">
+			</dir>
+			<dir>
+				<a class="kaif-Button" onClick="Confirmpw()">
+					회원가입
+				</a>
+			</dir>
+		</form>
+	</div>
+</body>
+</html>
